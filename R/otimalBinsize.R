@@ -223,7 +223,7 @@ optimalBinsize = function(
         if(i == length(bamfiles)){
 
             avReadsPerBin <- round(avReadsPerBin/length(bamfiles), 2)
-            if(class(medianReadsPerBin) == "numeric"){
+            if(unique(class(medianReadsPerBin) == "numeric")){
                 medianReadsPerBin <- round(median(medianReadsPerBin), 2)
             }else{
                 medianReadsPerBin <- round(apply(medianReadsPerBin, 2, median), 2)
